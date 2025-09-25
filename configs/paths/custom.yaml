@@ -1,0 +1,10 @@
+# 自定义路径配置
+# 继承默认配置并覆盖特定路径
+
+defaults:
+  - default
+
+
+
+# 自定义输出目录
+output_dir: /home/gyh/ryy/data/latec/origal_image_and_saliency_image

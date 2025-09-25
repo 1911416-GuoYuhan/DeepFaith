@@ -1,0 +1,26 @@
+integratedgradients:
+  baselines: 0
+  n_steps: 20
+  internal_batch_size: 128
+
+gradientshap:
+  baselines: 0
+
+deeplift:
+  eps: 0.000000001
+  baselines: 0
+
+saliency: {}
+
+occlusion:
+  sliding_window_shapes: 10
+  baselines: 0
+
+featureablation: {}
+
+lime:
+  n_samples: 100
+
+kernelshap:
+  baselines: 0
+  n_samples: 100

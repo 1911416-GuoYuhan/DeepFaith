@@ -1,0 +1,111 @@
+# Faithfulness
+
+# g
+faithfulnesscorrelation:
+  nr_runs: 50
+  subset_size: 3136
+  similarity_func: 'pearson'
+  perturb_effect: 'minus'
+  perturbation: 'replace'
+# g
+faithfulnessestimate:
+  features_in_step: 3136
+  similarity_func: 'pearson'
+  perturb_effect: 'minus'
+  perturbation: 'replace'
+# g
+monotonicitycorrelation:
+  features_in_step: 3136
+  similarity_func: 'spearman'
+  perturb_effect: 'variance'
+  perturbation: 'replace'
+
+# pixelflipping:
+#   features_in_step: 224
+#   perturb_baseline: "black"
+
+# g
+regionperturbation:
+  regions_evaluation: 3136
+  perturbation: 'replace'
+  perturb_effect: 'minus'
+
+# g
+insertion:
+  pixel_batch_size: 3136
+  sigma: 5.0
+  kernel_size: 15
+  perturbation: 'replace'
+  preservation: 'target'
+
+# l
+deletion:
+  pixel_batch_size: 3136
+  perturbation: 'replace'
+  preservation: 'target'
+
+# g
+negative:
+  pixel_batch_size: 3136
+  perturbation: 'replace'
+  preservation: 'target'
+
+# l
+positive:
+  pixel_batch_size: 3136
+  perturbation: 'replace'
+  preservation: 'target'
+
+# g
+irof:
+  pixel_batch_size: 3136
+  preservation: 'ratio'
+  perturbation: 'replace'
+
+# g
+infidelity:
+  nr_runs: 60
+  perturb_effect: 'minus'
+  perturbation: 'replace'
+  similarity_func: 'pearson'
+
+# road:
+#   noise: 0.1
+#   percentages_max: 100
+
+# sufficiency:
+#   threshold: 0.9
+
+# # Robustness
+
+# locallipschitzestimate:
+#   nr_samples: 5
+#   perturb_std: 0.1
+#   perturb_mean: 0.0
+
+# maxsensitivity:
+#   nr_samples: 10
+#   lower_bound: 0.2
+
+# continuity:
+#   patch_size: 56
+#   nr_steps: 20
+#   perturb_baseline: "uniform"
+
+# relativeinputstability:
+#   nr_samples: 10
+
+# relativeoutputstability:
+#   nr_samples: 10
+
+# relativerepresentationstability:
+#   nr_samples: 10
+
+# # Complexity
+
+# sparseness: {}
+
+# complexity: {}
+
+# effectivecomplexity:
+#   eps: 0.01

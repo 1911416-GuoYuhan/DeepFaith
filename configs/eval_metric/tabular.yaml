@@ -1,0 +1,59 @@
+# Faithfulness
+
+faithfulnesscorrelation:
+  nr_runs: 100
+  subset_size: 1
+  similarity_func: 'pearson_mse'
+  perturb_effect: 'minus'
+  perturbation: 'replace'
+
+faithfulnessestimate:
+  features_in_step: 1
+  similarity_func: 'pearson_mse'
+  perturb_effect: 'minus'
+  perturbation: 'replace'
+
+monotonicitycorrelation:
+  features_in_step: 1
+  similarity_func: 'spearman'
+  perturb_effect: 'variance'
+  perturbation: 'replace'
+
+regionperturbation:
+  regions_evaluation: 1
+  perturbation: 'replace'
+  perturb_effect: 'minus'
+
+insertion:
+  pixel_batch_size: 1
+  sigma: 0
+  kernel_size: 0
+  perturbation: 'replace'
+  preservation: 'target'
+
+deletion:
+  pixel_batch_size: 1
+  perturbation: 'replace'
+  preservation: 'target'
+
+negative:
+  pixel_batch_size: 1
+  perturbation: 'replace'
+  preservation: 'target'
+
+positive:
+  pixel_batch_size: 1
+  perturbation: 'replace'
+  preservation: 'target'
+
+irof:
+  preservation: 'ratio'
+  perturbation: 'replace'
+  pixel_batch_size: 1
+
+
+infidelity:
+  nr_runs: 100
+  perturb_effect: 'minus'
+  perturbation: 'replace'
+  similarity_func: 'pearson'

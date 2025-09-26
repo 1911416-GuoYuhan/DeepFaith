@@ -91,7 +91,7 @@ if __name__ == "__main__":
     device = torch.device('cuda:2') if torch.cuda.is_available() else torch.device('cpu')
     os.environ['PYTORCH_CUDA_ALLOC_CONF'] = 'expandable_segments:True'
 
-    csv_path = "/home/gyh/ryy/code/latec/src/tabular_data/Wholesale_customers_data.csv"
+    csv_path = "../../../data/datasets/tabular_data/Wholesale_customers_data.csv"
     df = pd.read_csv(csv_path)
     X, y = pre_step(df)
     X_train, X_test, y_train, y_test = train_test_split(X, y, test_size=0.2, random_state=42)
@@ -127,7 +127,7 @@ if __name__ == "__main__":
         )
         print(f"{method} Explanation completed: {attributions.shape}")
 
-        save_root = '../../../data/tabular_data/tabular_attr'
+        save_root = '../../../data/generated_saliency/wcd/mlp'
         if not os.path.exists(save_root):
             os.makedirs(save_root)
         for i in range(attributions.shape[0]):

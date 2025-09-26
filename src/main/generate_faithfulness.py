@@ -144,7 +144,7 @@ def generate_saliency_for_models(cfg: DictConfig):
     logging.basicConfig(
         level=logging.INFO, 
         format='%(asctime)s - %(levelname)s - %(message)s', 
-        filename=os.path.join('/home/gyh/ryy/code/latec/logs',dataset_name,'denoise.log'), 
+        filename=os.path.join('../../../logs',dataset_name,'denoise.log'), 
         filemode='a' 
     )
     models = ModelsModule(cfg)
@@ -172,7 +172,7 @@ def generate_saliency_for_singel_model(cfg: DictConfig):
     logging.basicConfig(
         level=logging.INFO,  
         format='%(asctime)s - %(levelname)s - %(message)s',  # 日志格式
-        filename=os.path.join('/home/gyh/ryy/code/latec/logs',dataset_name,'denoise.log'),  
+        filename=os.path.join('../../../logs',dataset_name,'denoise.log'),  
         filemode='a' 
     )
     models = ModelsModule(cfg)

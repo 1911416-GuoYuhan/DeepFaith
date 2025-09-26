@@ -77,7 +77,7 @@ def build_saliency_dataset(data_dir, dataset, model, train_ratio=0.8):
         
 
 if __name__ == '__main__':
-    data_dir = '/home/gyh/ryy/code/latec/data/generated_saliency'
+    data_dir = '../../data/generated_saliency'
     os.environ["CUDA_VISIBLE_DEVICES"] = "3"
     dataset = 'wcd'
     model = 'mlp'

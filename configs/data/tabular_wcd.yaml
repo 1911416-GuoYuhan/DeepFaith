@@ -9,7 +9,7 @@ dropout: 0.5
 modality: tabular
 num_classes: 2
 batch_size: 128
-weights_wcd_mlp: /home/gyh/ryy/code/latec/src/tabular_code/model_weight/wcdmlp_weights5_9205.pth
+weights_wcd_mlp: data/model_weights/wcd/mlp/wcdmlp_weights5_9205.pth
 eval_metric:
 # Faithfulness
  # Faithfulness

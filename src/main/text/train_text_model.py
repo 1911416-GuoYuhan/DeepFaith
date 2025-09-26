@@ -225,7 +225,7 @@ if __name__ == "__main__":
     print('Label distribution:', np.bincount(y_train.cpu().numpy()))
     print('Label min:', y_train.min().item(), 'max:', y_train.max().item())
     # Save vocabulary
-    vocab_save_path = '/home/gyh/ryy/code/latec/nlp_model_news/vocab.json'
+    vocab_save_path = '../../../data/datasets/nlp_model_news/vocab.json'
     save_vocab(vocab, word2idx, vocab_save_path)
     print(f"Vocabulary saved to: {vocab_save_path}")
     
@@ -235,4 +235,4 @@ if __name__ == "__main__":
     model = model.to(device)
     model = train_model(model, X_train, y_train, device, num_epochs, batch_size, lr)
     accuracy = test_model(model, X_test, y_test, device)
-    torch.save(model.state_dict(), f'/home/gyh/ryy/code/latec/nlp_model_news/model_lstm.pth')
+    torch.save(model.state_dict(), f'../../../data/datasets/nlp_model_news/model_lstm.pth')

@@ -6,7 +6,7 @@ from tqdm import tqdm
 import pandas as pd
 
 from captum.attr import IntegratedGradients, GradientShap, DeepLift, Occlusion, FeatureAblation, Saliency, Lime, KernelShap, visualization
-from ryy.code.latec.src.nlp_model_emotion.lstm_main import vocab_path
+from src.nlp_model_emotion.lstm_main import vocab_path
 from train_text_model import preprocess_data_agnews,preprocess_data_imdb, create_data_loader, TransformerClassifier,LSTMClassifier
 from captum.attr import TokenReferenceBase
 
@@ -352,8 +352,8 @@ if __name__ == "__main__":
 
     max_len = 300
     # Load data and model
-    train_path = '../../../data/text_data/agnews/train-00000-of-00001.parquet'
-    test_path = '../../../data/text_data/agnews/test-00000-of-00001.parquet'
+    train_path = '../../../data/datasets/agnews/train-00000-of-00001.parquet'
+    test_path = '../../../data/datasets/agnews/test-00000-of-00001.parquet'
     batch_size = 32  # Reduce batch size
     vocab_path = None
 
@@ -374,7 +374,7 @@ if __name__ == "__main__":
     print(f"Using device: {device}")
 
     # Load model
-    model_path = '../../../models/agnews/model_transformer.pth'
+    model_path = '../../../data/model_weights/agnews/model_transformer.pth'
     wrapped_model, embedding_model, original_model = load_model(
         model_path=model_path,
         vocab_size=vocab_size,
@@ -416,7 +416,7 @@ if __name__ == "__main__":
         print(f"{method} explanation completed: {attributions.shape}, {labels.shape}, {texts.shape}")
 
         # ========== Sample-level saving ========== #
-        save_root = '../../../data/text_data/text_attr'
+        save_root = '../../../data/generated_saliency/agnews/transformer'
         print(f"Starting to save data for {len(attributions)} samples...")
         for i in range(len(attributions)):
             if i % 100 == 0:  # Print progress every 100 samples

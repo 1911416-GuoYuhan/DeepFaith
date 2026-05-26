@@ -86,8 +86,13 @@ Then download our repository and cd into the root directory.
 4. Our training script contains a dynamic weighting strategy to balance two loss functions. One can adjust hyperparameters in the algorithm below.
 
 ### Citation: 
+
 ```bash
-Yuhan Guo, Lizhong Ding, Shihao Jia, Yanyu Ren, Pengqi Li, Jiarun Fu, Changsheng Li, Ye Yuan, Guoren Wang. Learning for Highly Faithful Explainability. In ICLR, 2026.
+@inproceedings{guolearning,
+  title={Learning for Highly Faithful Explainability},
+  author={Guo, Yuhan and Ding, Lizhong and Jia, Shihao and Ren, Yanyu and Li, Pengqi and Fu, Jiarun and Li, Changsheng and Yuan, Ye and Wang, Guoren},
+  booktitle={The Fourteenth International Conference on Learning Representations}
+}
 ```
 
 <br>

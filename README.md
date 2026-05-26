@@ -16,7 +16,7 @@
   </p>
 </p>
 
-This repository contains the official implementation of **DeepFaith** (Deep architecture-based Faithful amortized explainer), a systematical solution for highly faithful explainability in the **Learning to Explain** paradigm, proposed in the paper *"Learning for Highly Faithful Explainability"* (under review at ICLR 2026).  
+This repository contains the official implementation of **DeepFaith** (Deep architecture-based Faithful amortized explainer), a systematical solution for highly faithful explainability in the **Learning to Explain** paradigm, proposed in the paper *"Learning for Highly Faithful Explainability"* (Published at ICLR 2026).  
 
 
 ## Introduction
@@ -84,6 +84,11 @@ Then download our repository and cd into the root directory.
     python src/main/train_explainer.py  data=your_dataset.yaml eval_metric=modality_dataset.yaml
     ```
 4. Our training script contains a dynamic weighting strategy to balance two loss functions. One can adjust hyperparameters in the algorithm below.
+
+### Citation: 
+```bash
+Yuhan Guo, Lizhong Ding, Shihao Jia, Yanyu Ren, Pengqi Li, Jiarun Fu, Changsheng Li, Ye Yuan, Guoren Wang. Learning for Highly Faithful Explainability. In ICLR, 2026.
+```
 
 <br>
 <p align="center">

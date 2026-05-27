@@ -91,7 +91,8 @@ Then download our repository and cd into the root directory.
 @inproceedings{guolearning,
   title={Learning for Highly Faithful Explainability},
   author={Guo, Yuhan and Ding, Lizhong and Jia, Shihao and Ren, Yanyu and Li, Pengqi and Fu, Jiarun and Li, Changsheng and Yuan, Ye and Wang, Guoren},
-  booktitle={The Fourteenth International Conference on Learning Representations}
+  booktitle={The Fourteenth International Conference on Learning Representations},
+  year={2026}
 }
 ```
 
